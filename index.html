@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocialBeli</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="auth-container">
+    <h1>Добро пожаловать в SocialBeli</h1>
+    <div id="auth-forms">
+      <form id="login-form">
+        <h2>Вход</h2>
+        <input type="text" id="login-username" placeholder="Имя пользователя" required>
+        <input type="password" id="login-password" placeholder="Пароль" required>
+        <button type="button" onclick="login()">Войти</button>
+        <p>Нет аккаунта? <a href="#" onclick="toggleForms()">Зарегистрироваться</a></p>
+      </form>
+
+      <form id="register-form" style="display: none;">
+        <h2>Регистрация</h2>
+        <input type="text" id="register-username" placeholder="Имя пользователя" required>
+        <input type="password" id="register-password" placeholder="Пароль" required>
+        <button type="button" onclick="register()">Зарегистрироваться</button>
+        <p>Уже есть аккаунт? <a href="#" onclick="toggleForms()">Войти</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="main-container" style="display: none;">
+    <header>
+      <h1>SocialBeli</h1>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="showSection('feed')">Лента</a></li>
+          <li><a href="#" onclick="showSection('profile')">Профиль</a></li>
+          <li><a href="#" onclick="showSection('messages')">Сообщения</a></li>
+          <li><a href="#" onclick="showSection('notifications')">Уведомления</a></li>
+          <li><a href="#" onclick="logout()">Выход</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="feed">
+        <h2>Лента</h2>
+        <div id="new-post">
+          <textarea placeholder="Что у вас нового?"></textarea>
+          <button onclick="addPost()">Опубликовать</button>
+        </div>
+        <div id="posts">
+          <!-- Здесь будут загружаться посты -->
+        </div>
+      </section>
+
+      <section id="profile" style="display: none;">
+        <h2>Профиль</h2>
+        <div id="user-profile">
+          <p><strong>Имя:</strong> Иван Иванов</p>
+          <p><strong>О себе:</strong> Веб-разработчик, увлеченный созданием красивого и эффективного кода. Люблю технологии и кофе.</p>
+          <p><strong>Местоположение:</strong> Москва, Россия</p>
+          <button onclick="editProfile()">Редактировать профиль</button>
+        </div>
+      </section>
+
+      <section id="messages" style="display: none;">
+        <h2>Сообщения</h2>
+        <p>У вас нет новых сообщений.</p>
+      </section>
+
+      <section id="notifications" style="display: none;">
+        <h2>Уведомления</h2>
+        <p>У вас нет новых уведомлений.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
