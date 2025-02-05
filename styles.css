@@ -1,0 +1,178 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+#auth-container {
+  text-align: center;
+  padding: 50px;
+}
+
+#auth-forms {
+  display: inline-block;
+  text-align: left;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px; /* Более скругленные углы */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#auth-forms input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Более скругленные углы */
+}
+
+#auth-forms button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 10px; /* Более скругленные углы */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#auth-forms button:hover {
+  background-color: #3700b3;
+  transform: scale(1.05);
+}
+
+header {
+  background-image: linear-gradient(to right, #6200ea, #3700b3);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 30px 30px; /* Скругленные нижние углы */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  border-radius: 10px; /* Более скругленные углы */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+header nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 40px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px; /* Более скругленные углы */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+section:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+#new-post {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#new-post textarea {
+  resize: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px; /* Более скругленные углы */
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 80px;
+}
+
+#new-post button {
+  align-self: flex-end;
+  padding: 12px 24px;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 10px; /* Более скругленные углы */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#new-post button:hover {
+  background-color: #3700b3;
+  transform: scale(1.05);
+}
+
+.post {
+  border-top: 1px solid #eee;
+  padding: 15px 0;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.post .actions {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.post .actions button {
+  margin-right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.post .actions button:hover {
+  transform: scale(1.1);
+}
+
+.post .actions .like-icon img,
+.post .actions .comment-icon img {
+  width: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
